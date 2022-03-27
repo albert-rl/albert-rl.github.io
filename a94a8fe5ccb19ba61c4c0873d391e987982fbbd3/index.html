@@ -111,56 +111,68 @@
 			<section class="panel color4-alt" id=attendance>
 				<div class="intro color4">
 					<h2 class="major">Asistencia</h2>
-					<!-- <p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p> -->
-					<p>Ahora es tu turno. Confirma (o rechaza) tu asistencia a nuestra celebración y dejanos un mensaje. Rellena el formulario y eníanos tu respuesta, no dudes en escribirnos una pequeña nota !</p>
+					<p>Ahora es tu turno. Confirma (o rechaza) tu asistencia a nuestra celebración y déjanos un mensaje. Rellena el formulario y eníanos tu respuesta.</p>
 				</div>
 				<div class="inner columns divided">
-					<!-- <div class="span-3-25"> -->
- 					<div class="span-3-75">
+					<div class="span-3-75">
 						<form method="post" action="https://formspree.io/f/xayvdeyj">
+							<input type="hidden" name="subject" value="Boda Albert y Tania - asistencia"/>
+							<input type="hidden" name="_language" value="es"/>
+							<div class="gotcha">
+								<input type="text" name="_gotcha"/>
+							</div>
 							<div class="fields">
-								<div class="field third">
+								<div class="field half">
+									<input type="radio" id="confirm" name="attendance" value="yes" class="color2" checked />
+									<label for="confirm">Sí, claro que asisitiré!</label>
+								</div>
+								<div class="field half">
+									<input type="radio" id="reject" name="attendance" value="no" class="color2" />
+									<label for="reject">Lo siento, divertíos!</label>
+								</div>
+								<div class="field half">
 									<label for="name">Nombre</label>
-									<input type="text" name="name" id="name" value="" placeholder="Albert Rodríguez" />
+									<input type="text" name="name" id="name" value="" placeholder="Lola Mento" />
 								</div>
-								<div class="field third">
-									<label for="demo-email">Email</label>
-									<input type="email" name="email" id="email" value="" placeholder="albert@untitled.tld" />
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" value="" placeholder="lola@mento.mucho" />
 								</div>
-								<div class="field third">
-									<label for="menu">Menu</label>
+								<div class="field half">
+									<label for="guests">Traes acompañantes?</label>
 									<div class="select-wrapper">
-										<select name="menu" id="menu">
-											<option value="">-</option>
-											<option value="1">Vegetariano</option>
-											<option value="1">Carne</option>
-											<option value="1">Pescado</option>
+										<select name="guests" id="guests">
+											<option value="1">No, gracias</option>
+											<option value="2">1 (2 personas en total)</option>
+											<option value="3">2 (3 personas en total)</option>
+											<option value="4">3 (4 personas en total)</option>
+											<option value="5">4 (5 personas en total)</option>
+											<option value="6">5 (6 personas en total)</option>
 										</select>
 									</div>
 								</div>
 								<div class="field half">
-									<input type="radio" id="confirm" name="attendance" class="color2" checked />
-									<label for="confirm">Sí, claro que asisitiré!</label>
+									<label for="spec">Preferencias sobre el menú?</label>
+									<input type="text" id="spec" value="Especifícalas en los comentarios ;)" disabled />
 								</div>
-								<div class="field half">
-									<input type="radio" id="reject" name="attendance" class="color2" />
-									<label for="reject">Lo siento, divertíos!</label>
-								</div>
-								<!-- <div class="field quarter">
-									<input type="checkbox" id="demo-copy" name="demo-copy" class="color2" />
-									<label for="demo-copy">Email a copy</label>
-								</div>
-								<div class="field quarter">
-									<input type="checkbox" id="demo-human" name="demo-human" class="color2" checked />
-									<label for="demo-human">Not a robot</label>
-								</div> -->
 								<div class="field">
-									<label for="demo-message">Message</label>
-									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="2"></textarea>
+									<label for="message">Comentarios</label>
+									<textarea name="message" id="message" placeholder="Déjanos algún comentario gracioso (ánimos, consejos) o información útil (alergias, intolerancias, preferencias sobre el menú)" rows="3"></textarea>
 								</div>
 							</div>
+							<!-- <div class="field half">
+								<label for="menu">Menu</label>
+								<div class="select-wrapper">
+									<select name="menu" id="menu">
+										<option value="">-</option>
+										<option value="vegetarian">Vegetariano</option>
+										<option value="meat">Carne</option>
+										<option value="fish">Pescado</option>
+									</select>
+								</div>
+							</div> -->
 							<ul class="actions">
-								<li><input type="submit" value="Send Message" class="primary color2" /></li>
+								<li><input type="submit" value="Enviar respuesta" class="primary color2" /></li>
 								<li><input type="reset" value="Reset"/></li>
 							</ul>
 						</form>
@@ -394,7 +406,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</div>
 					<div class="span-4-5">
 						<h3 class="major">Form</h3>
-						<form method="post" action="#">
+						<!-- <form method="post" action="#">
 							<div class="fields">
 								<div class="field third">
 									<label for="demo-name">Name</label>
@@ -441,7 +453,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								<li><input type="submit" value="Send Message" class="primary color2" /></li>
 								<li><input type="reset" value="Reset" /></li>
 							</ul>
-						</form>
+						</form> -->
 					</div>
 				</div>
 			</section>
