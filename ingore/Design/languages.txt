@@ -1,0 +1,9 @@
+https://stackoverflow.com/questions/46008760/how-to-build-multiple-language-website-using-pure-html-js-jquery
+
+https://stackoverflow.com/questions/24034588/static-html-website-bootstrap-multi-language-support/24035422#24035422
+
+https://www.i18next.com/translation-function/essentials
+
+https://github.com/mthh/loc-i18next
+
+https://code.tutsplus.com/tutorials/translating-stimulus-apps-with-i18next--cms-30770
