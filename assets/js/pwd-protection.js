@@ -34,7 +34,7 @@ button[0].addEventListener("click", function() {
 document.onkeydown = function(e) {
   e = e || window.event
   if (e.keyCode == 13) {
-    event.preventDefault();
+    e.preventDefault();
     login(password[0].value)
   }
 }
