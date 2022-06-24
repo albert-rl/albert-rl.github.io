@@ -31,10 +31,15 @@ button[0].addEventListener("click", function() {
   login(password[0].value)
 })
 
-document.onkeydown = function(e) {
-  e = e || window.event
+// document.onkeydown = function(e) {
+//   e = e || window.event
+//   if (e.keyCode == 13) {
+//     login(password[0].value)
+//   }
+// }
+
+function albrod1(e){
   if (e.keyCode == 13) {
-    e.preventDefault();
     login(password[0].value)
   }
 }
