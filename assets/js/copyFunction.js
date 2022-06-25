@@ -7,5 +7,5 @@ function CopyIban(textToCopy) {
   document.execCommand("copy");
   document.body.removeChild(TempText);
 
-  alert("Copied the text: " + TempText.value);
+  alert("IBAN copiado en el portapapeles");
 }
