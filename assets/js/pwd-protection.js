@@ -15,20 +15,20 @@ function login(secret) {
       window.location = url
     } else {
       parent.location.hash = hash
-      password[0].setAttribute('placeholder', 'Contraseña incorrecta, prueba otra vez')
-      password[0].value = ''
+      password.setAttribute('placeholder', 'Contraseña incorrecta, prueba otra vez')
+      password.value = ''
     }
   }
   request.onerror = function() {
     parent.location.hash = hash
-    password[0].setAttribute('placeholder', 'Contraseña incorrecta, prueba otra vez')
-    password[0].value = ''
+    password.setAttribute('placeholder', 'Contraseña incorrecta, prueba otra vez')
+    password.value = ''
   }
   request.send()
 }
 
-button[0].addEventListener("click", function() {
-  login(password[0].value)
+button.addEventListener("click", function() {
+  login(password.value)
 })
 
 //function form_submit() {
