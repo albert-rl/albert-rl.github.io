@@ -31,21 +31,21 @@ button.addEventListener("click", function() {
   login(password.value)
 })
 
-//function form_submit() {
-//  // Execute a function when the user presses a key on the keyboard
-//  password.addEventListener("keypress", function(event) {
-//
-//    // If the user presses the "Enter" key on the keyboard
-//    if (event.key === "Enter") {
-//      event.preventDefault(); // Cancel the default action, if needed
-//      button.click();         // Trigger the button element with a click
-//    }
-//    
-//  })
-// }
-
-
 function form_submit() {
-  button.click()
+  // Execute a function when the user presses a key on the keyboard
+  password.addEventListener("keypress", function(event) {
+
+   // If the user presses the "Enter" key on the keyboard
+   if (event.key === "Enter") {
+     event.preventDefault(); // Cancel the default action, if needed
+     button.click();         // Trigger the button element with a click
+   }
+   
+ })
 }
+
+
+//function form_submit() {
+//  button.click()
+//}
 
