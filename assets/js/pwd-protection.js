@@ -1,7 +1,7 @@
 "use strict"
 
-var button = document.querySelectorAll('[data-id="submit"]')
-var password = document.querySelectorAll('[data-id="pwd"]')
+var button = document.getElementById('btn-submit')
+var password = document.getElementById('pwd-input')
 
 function login(secret) {
   var hash = sha1(secret)
@@ -31,15 +31,12 @@ button[0].addEventListener("click", function() {
   login(password[0].value)
 })
 
-// document.onkeydown = function(e) {
-//   e = e || window.event
-//   if (e.keyCode == 13) {
-//     login(password[0].value)
-//   }
-// }
+// Execute a function when the user presses a key on the keyboard
+password.addEventListener("keypress", function(event) {
 
-function albrod1(e){
-  if (e.keyCode == 13) {
-    login(password[0].value)
-  }
+// If the user presses the "Enter" key on the keyboard
+if (event.key === "Enter") {
+event.preventDefault(); // Cancel the default action, if needed
+button.click();         // Trigger the button element with a click
 }
+});
