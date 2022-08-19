@@ -32,14 +32,10 @@ button.addEventListener("click", function() {
   login(password.value)
 })
 
-form.addEventListener('submit', function(event) {
-  password.addEventListener("keypress", function(event) {
-
-   if (event.key === "Enter") {
-     event.preventDefault() // Cancel the default action, if needed
-     login(password.value)  // Trigger the button element with a click 
-     // button.click();         // Trigger the button element with a click
-   }
-   
- })
+password.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+   event.preventDefault() // Cancel the default action, if needed
+   login(password.value)  // Trigger the button element with a click 
+   // button.click();         // Trigger the button element with a click
+  }   
 })
