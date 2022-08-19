@@ -2,6 +2,7 @@
 
 var button = document.getElementById('btn-submit')
 var password = document.getElementById('pwd-input')
+var form = document.getElementById('pwd-form')
 
 function login(secret) {
   var hash = sha1(secret)
@@ -31,21 +32,14 @@ button.addEventListener("click", function() {
   login(password.value)
 })
 
-function form_submit() {
-  // Execute a function when the user presses a key on the keyboard
+form.addEventListener('submit', function(event) {
   password.addEventListener("keypress", function(event) {
 
-   // If the user presses the "Enter" key on the keyboard
    if (event.key === "Enter") {
-     event.preventDefault(); // Cancel the default action, if needed
-     button.click();         // Trigger the button element with a click
+     event.preventDefault() // Cancel the default action, if needed
+     login(password.value)  // Trigger the button element with a click 
+     // button.click();         // Trigger the button element with a click
    }
    
  })
-}
-
-
-//function form_submit() {
-//  button.click()
-//}
-
+})
