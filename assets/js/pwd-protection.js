@@ -34,6 +34,6 @@ button.addEventListener("click", function() {
 password.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
    event.preventDefault() // Cancel the default action, if needed
-   login(password.value)  // Trigger the button element with a click 
-  }   
+   login(password.value)  // Trigger the button element with a click
+  }
 })
